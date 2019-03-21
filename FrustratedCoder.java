@@ -11,7 +11,7 @@ class FrustratedCoder {
         }
         Arrays.sort(a);
         int sum=0;
-        int max = n-1;
+        /*int max = n-1;
         
         for(int i=n-1;i>0;i--)
         {
@@ -24,7 +24,33 @@ class FrustratedCoder {
            {
                sum=sum+a[i];
            }
+        }*/
+        ///second solution
+        for(int i=1;i<n;i++)
+        {
+        	if(a[i]-a[i-1]>0)
+        	{
+        		a[i-1]=0;
+        	}
+        	else
+        	{
+        		int j=i-1;
+        		while(j>=0)
+        		{
+        			if(a[j]!=0&&a[i]-a[j]>0)
+        			{
+        				a[j]=0;
+        				break;
+        			}
+        			else
+        				j--;
+        		}
+        	}
+        		
         }
+        
+        for(int i=0;i<n;i++)
+        	sum=sum+a[i];
         System.out.println(sum);
  
         sc.close();
