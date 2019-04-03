@@ -1,3 +1,3 @@
 #CPP
 
-Some Competitive Progs.
+Some Competitive Programming Progs.
